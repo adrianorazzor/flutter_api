@@ -5,7 +5,9 @@ defmodule FlutterApiWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", FlutterApiWeb do
+  scope "/", FlutterApiWeb do
     pipe_through :api
+
+    post "/login", AuthControllerSimple, :login
   end
 end

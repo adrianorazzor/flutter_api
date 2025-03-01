@@ -9,7 +9,8 @@ defmodule FlutterApi.Application do
   def start(_type, _args) do
     children = [
       FlutterApiWeb.Telemetry,
-      FlutterApi.Repo,
+      # Removed Repo from supervision tree since we're using in-memory approach
+      # FlutterApi.Repo,
       {DNSCluster, query: Application.get_env(:flutter_api, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: FlutterApi.PubSub},
       # Start a worker by calling: FlutterApi.Worker.start_link(arg)
