@@ -21,5 +21,10 @@ defmodule FlutterApiWeb.Router do
     # Forma de Recebimento endpoints
     get "/formaDeRecebimento", FormaDeRecebimentoController, :index
     get "/formaDeRecebimento/:id", FormaDeRecebimentoController, :show
+    
+    # Nota Emitida endpoints
+    get "/notaEmitida", NotaEmitidaController, :index
+    get "/notaEmitida/vendasporvendedor/:id", NotaEmitidaController, :vendas_por_vendedor
+    get "/notaEmitida/:id", NotaEmitidaController, :show
   end
 end

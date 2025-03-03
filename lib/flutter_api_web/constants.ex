@@ -10,7 +10,8 @@ defmodule FlutterApiWeb.Constants do
       pessoa: "/pessoa",
       cidade: "/cidade",
       item: "/item",
-      formaDeRecebimento: "/formaDeRecebimento"
+      formaDeRecebimento: "/formaDeRecebimento",
+      notaEmitida: "/notaEmitida"
     }
   end
 end
