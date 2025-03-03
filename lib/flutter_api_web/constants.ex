@@ -6,7 +6,11 @@ defmodule FlutterApiWeb.Constants do
   # API endpoint paths
   def api_endpoints do
     %{
-      login: "/login"
+      login: "/login",
+      pessoa: "/pessoa",
+      cidade: "/cidade",
+      item: "/item",
+      formaDeRecebimento: "/formaDeRecebimento"
     }
   end
 end
