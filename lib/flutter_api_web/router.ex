@@ -26,5 +26,6 @@ defmodule FlutterApiWeb.Router do
     get "/notaEmitida", NotaEmitidaController, :index
     get "/notaEmitida/vendasporvendedor/:id", NotaEmitidaController, :vendas_por_vendedor
     get "/notaEmitida/:id", NotaEmitidaController, :show
+    post "/notaEmitida", NotaEmitidaController, :create
   end
 end

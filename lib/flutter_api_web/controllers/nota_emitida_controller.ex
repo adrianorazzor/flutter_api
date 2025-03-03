@@ -432,6 +432,20 @@ defmodule FlutterApiWeb.NotaEmitidaController do
     end
   end
 
+  def create(conn, nota_params) do
+    # Log the received parameters
+    IO.inspect(nota_params, label: "Received nota_params")
+
+    # Generate a random ID to simulate the ID of the created nota in a queue
+    # In a real application, this would be a database ID or queue ID
+    queue_id = :rand.uniform(1000)
+
+    # Return the queue ID as a simple response
+    conn
+    |> put_status(:created)
+    |> json(queue_id)
+  end
+
   # Helper function to sort notas
   defp sort_notas(notas, sort_by, true) do
     Enum.sort_by(notas, fn nota -> Map.get(nota, String.to_atom(sort_by)) end)
